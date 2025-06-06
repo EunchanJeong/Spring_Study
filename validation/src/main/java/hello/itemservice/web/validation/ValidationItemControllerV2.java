@@ -75,7 +75,7 @@ public class ValidationItemControllerV2 {
             }
         }
 
-        // 검증에 실패하면 다시 일벽 폼으로
+        // 검증에 실패하면 다시 입력 폼으로
         if(bindingResult.hasErrors()) {
             log.info("errors={}", bindingResult);
             return "validation/v2/addForm";
@@ -108,7 +108,7 @@ public class ValidationItemControllerV2 {
             }
         }
 
-        // 검증에 실패하면 다시 일벽 폼으로
+        // 검증에 실패하면 다시 입력 폼으로
         if(bindingResult.hasErrors()) {
             log.info("errors={}", bindingResult);
             return "validation/v2/addForm";
@@ -143,7 +143,7 @@ public class ValidationItemControllerV2 {
 
 
 
-        // 검증에 실패하면 다시 일벽 폼으로
+        // 검증에 실패하면 다시 입력 폼으로
         if(bindingResult.hasErrors()) {
             log.info("errors={}", bindingResult);
             return "validation/v2/addForm";
@@ -177,7 +177,7 @@ public class ValidationItemControllerV2 {
             }
         }
 
-        // 검증에 실패하면 다시 일벽 폼으로
+        // 검증에 실패하면 다시 입력 폼으로
         if(bindingResult.hasErrors()) {
             log.info("errors={}", bindingResult);
             return "validation/v2/addForm";
@@ -195,7 +195,7 @@ public class ValidationItemControllerV2 {
         // 검증 로직
         itemValidator.validate(item, bindingResult);
 
-        // 검증에 실패하면 다시 일벽 폼으로
+        // 검증에 실패하면 다시 입력 폼으로
         if(bindingResult.hasErrors()) {
             log.info("errors={}", bindingResult);
             return "validation/v2/addForm";
@@ -210,7 +210,7 @@ public class ValidationItemControllerV2 {
     @PostMapping("/add")
     public String addItemV6(@Validated @ModelAttribute Item item, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model) {
 
-        // 검증에 실패하면 다시 일벽 폼으로
+        // 검증에 실패하면 다시 입력 폼으로
         if(bindingResult.hasErrors()) {
             log.info("errors={}", bindingResult);
             return "validation/v2/addForm";
